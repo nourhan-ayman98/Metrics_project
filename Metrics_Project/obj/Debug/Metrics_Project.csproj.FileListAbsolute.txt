@@ -1,0 +1,10 @@
+C:\Users\nourhan\source\repos\Metrics_Project\Metrics_Project\bin\Debug\Metrics_Project.exe.config
+C:\Users\nourhan\source\repos\Metrics_Project\Metrics_Project\bin\Debug\Metrics_Project.exe
+C:\Users\nourhan\source\repos\Metrics_Project\Metrics_Project\bin\Debug\Metrics_Project.pdb
+C:\Users\nourhan\source\repos\Metrics_Project\Metrics_Project\obj\Debug\Metrics_Project.csprojAssemblyReference.cache
+C:\Users\nourhan\source\repos\Metrics_Project\Metrics_Project\obj\Debug\Metrics_Project.Form1.resources
+C:\Users\nourhan\source\repos\Metrics_Project\Metrics_Project\obj\Debug\Metrics_Project.Properties.Resources.resources
+C:\Users\nourhan\source\repos\Metrics_Project\Metrics_Project\obj\Debug\Metrics_Project.csproj.GenerateResource.cache
+C:\Users\nourhan\source\repos\Metrics_Project\Metrics_Project\obj\Debug\Metrics_Project.csproj.CoreCompileInputs.cache
+C:\Users\nourhan\source\repos\Metrics_Project\Metrics_Project\obj\Debug\Metrics_Project.exe
+C:\Users\nourhan\source\repos\Metrics_Project\Metrics_Project\obj\Debug\Metrics_Project.pdb
