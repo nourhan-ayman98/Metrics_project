@@ -13,9 +13,12 @@ namespace Metrics_Project
     public partial class Form1 : Form
     {
         FunctionPoint f = new FunctionPoint();
+        int index_of_datagridview = 1;
         public Form1()
         {
+
             InitializeComponent();
+          
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -43,6 +46,19 @@ namespace Metrics_Project
         private void Form1_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode==Keys.Down)
+            {
+               
+            }
         }
     }
 }
