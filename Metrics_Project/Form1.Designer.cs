@@ -48,9 +48,13 @@
             this.I_CB = new System.Windows.Forms.ComboBox();
             this.F_CB = new System.Windows.Forms.ComboBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TechnicalFactors = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.own_factors_bttn = new System.Windows.Forms.Button();
+            this.show_factors = new System.Windows.Forms.Button();
+            this.put_rate_to_all_factors = new System.Windows.Forms.Button();
+            this.panel_factors = new System.Windows.Forms.Panel();
+            this.rate_Box_all = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel_factors.SuspendLayout();
             this.SuspendLayout();
             // 
             // Input_box
@@ -249,34 +253,92 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.TechnicalFactors});
-            this.dataGridView1.Location = new System.Drawing.Point(610, 12);
+            this.dataGridView1.Location = new System.Drawing.Point(621, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(663, 345);
+            this.dataGridView1.Size = new System.Drawing.Size(780, 354);
             this.dataGridView1.TabIndex = 19;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
+            this.dataGridView1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridView1_KeyPress);
             // 
-            // ID
+            // own_factors_bttn
             // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
+            this.own_factors_bttn.BackColor = System.Drawing.Color.Black;
+            this.own_factors_bttn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.own_factors_bttn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.own_factors_bttn.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.own_factors_bttn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.own_factors_bttn.Location = new System.Drawing.Point(1466, 49);
+            this.own_factors_bttn.Name = "own_factors_bttn";
+            this.own_factors_bttn.Size = new System.Drawing.Size(128, 52);
+            this.own_factors_bttn.TabIndex = 20;
+            this.own_factors_bttn.Text = "Put your own factors ";
+            this.own_factors_bttn.UseVisualStyleBackColor = false;
             // 
-            // TechnicalFactors
+            // show_factors
             // 
-            this.TechnicalFactors.HeaderText = "Technical Factors";
-            this.TechnicalFactors.Name = "TechnicalFactors";
-            this.TechnicalFactors.Width = 400;
+            this.show_factors.BackColor = System.Drawing.Color.Black;
+            this.show_factors.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.show_factors.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.show_factors.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.show_factors.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.show_factors.Location = new System.Drawing.Point(1466, 151);
+            this.show_factors.Name = "show_factors";
+            this.show_factors.Size = new System.Drawing.Size(128, 52);
+            this.show_factors.TabIndex = 21;
+            this.show_factors.Text = "Show factors";
+            this.show_factors.UseVisualStyleBackColor = false;
+            this.show_factors.Click += new System.EventHandler(this.show_factors_Click);
+            // 
+            // put_rate_to_all_factors
+            // 
+            this.put_rate_to_all_factors.BackColor = System.Drawing.Color.Black;
+            this.put_rate_to_all_factors.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.put_rate_to_all_factors.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.put_rate_to_all_factors.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.put_rate_to_all_factors.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.put_rate_to_all_factors.Location = new System.Drawing.Point(1466, 274);
+            this.put_rate_to_all_factors.Name = "put_rate_to_all_factors";
+            this.put_rate_to_all_factors.Size = new System.Drawing.Size(128, 52);
+            this.put_rate_to_all_factors.TabIndex = 22;
+            this.put_rate_to_all_factors.Text = "Put Rate to all factors";
+            this.put_rate_to_all_factors.UseVisualStyleBackColor = false;
+            this.put_rate_to_all_factors.Click += new System.EventHandler(this.put_rate_to_all_factors_Click);
+            // 
+            // panel_factors
+            // 
+            this.panel_factors.Controls.Add(this.rate_Box_all);
+            this.panel_factors.Location = new System.Drawing.Point(1441, 349);
+            this.panel_factors.Name = "panel_factors";
+            this.panel_factors.Size = new System.Drawing.Size(179, 143);
+            this.panel_factors.TabIndex = 23;
+            // 
+            // rate_Box_all
+            // 
+            this.rate_Box_all.FormattingEnabled = true;
+            this.rate_Box_all.Items.AddRange(new object[] {
+            "No InFluence",
+            "Incidental",
+            "Moderate",
+            "Average",
+            "Significant",
+            "Essential"});
+            this.rate_Box_all.Location = new System.Drawing.Point(15, 23);
+            this.rate_Box_all.Name = "rate_Box_all";
+            this.rate_Box_all.Size = new System.Drawing.Size(155, 21);
+            this.rate_Box_all.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumPurple;
-            this.ClientSize = new System.Drawing.Size(1285, 663);
+            this.ClientSize = new System.Drawing.Size(1684, 663);
+            this.Controls.Add(this.panel_factors);
+            this.Controls.Add(this.put_rate_to_all_factors);
+            this.Controls.Add(this.show_factors);
+            this.Controls.Add(this.own_factors_bttn);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.F_CB);
             this.Controls.Add(this.I_CB);
@@ -301,6 +363,7 @@
             this.Text = "Function Point calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel_factors.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -328,8 +391,11 @@
         private System.Windows.Forms.ComboBox I_CB;
         private System.Windows.Forms.ComboBox F_CB;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TechnicalFactors;
+        private System.Windows.Forms.Button own_factors_bttn;
+        private System.Windows.Forms.Button show_factors;
+        private System.Windows.Forms.Button put_rate_to_all_factors;
+        private System.Windows.Forms.Panel panel_factors;
+        private System.Windows.Forms.ComboBox rate_Box_all;
     }
 }
 
